@@ -60,12 +60,63 @@ fn main() {
         array
    */
   
-  let months = ["January", "February", "March", "April", "May", "June", "July",
+  let _months = ["January", "February", "March", "April", "May", "June", "July",
   "August", "September", "October", "November", "December"];
   //println!("Array is {}", months);
   let array_1: [i32; 6] = [1, 2, 3, 4, 5, 6];
-  let array_2: [i32; 3] = [3,3,3];
-  let array_3 = [3;5]; // 5 element have value is 3
+  let _array_2: [i32; 3] = [3,3,3];
+  let _array_3 = [3;5]; // 5 element have value is 3
   println!("Value element 1 is: {}", array_1[0]);
 
+  /*
+        Function
+        Statements and Expressions
+  */
+   another_function();
+   another_function_1(123); 
+   print_labeled_measurement(5, 'h');
+
+   let y_statement = 10;
+   let y_express = {
+    let y_statement = 11;
+    y_statement + 1 // not comma, semicolon 
+   };
+   println!("The value of statement is: {}", y_statement);
+   println!("The value of expression is: {}", y_express);
+
+
+   /*
+        Functions with Return Values
+   */
+
+   let five_func = five();
+   println!("The value of five function is: {}", five_func);
+   let plus_one_func = plus_one(10);
+   println!("The value of plus_one() function is: {}", plus_one_func);
 }
+
+fn another_function(){
+    println!("Another function.");
+}
+
+fn another_function_1(x: i32){
+    println!("The value of param is: {}", x);
+}
+
+fn print_labeled_measurement(value: i32, unit_label: char) {
+    println!("The measurement is: {}{}", value, unit_label);
+}
+
+fn five() -> i32 {
+    5
+}
+
+fn plus_one(x: i32) -> i32{
+    x + 1
+}
+
+// fn plus_one_error(x: i32) -> i32{
+//     x + 1;
+// }
+// output error, help that issue 
+// check error in compiler
