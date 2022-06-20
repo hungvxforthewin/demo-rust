@@ -84,6 +84,7 @@ fn main() {
 
     let my_array = [7, 8, 3, 9, 9];
     let mut index: usize = 0; // why i32
+    // When developing in Rust, numeric types like i32 cannot be used as indexes to a slice or vector. This causes an error for new Rust developers.
 
     while index < 5 {
         println!("the value is: {}", my_array[index]);
