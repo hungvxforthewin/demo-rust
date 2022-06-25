@@ -61,7 +61,7 @@ fn main() {
 
 }
 fn area(width: u32, height: u32) -> u32 {
-    width * height
+    return width * height
 }
 fn area_2(dimensions: (u32, u32)) -> u32 {
     dimensions.0 * dimensions.1
