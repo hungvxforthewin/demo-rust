@@ -5,13 +5,9 @@ mod repository;
 
 use actix_web::{get, App, HttpResponse, HttpServer, Responder, web::Data};
 use api::user_api::{create_user, get_user, update_user, delete_user, get_all_users};
+use api::test_api::{hello};
 use repository::mongodb_repo::MongoRepo;
 
-
-#[get("/hello")]
-async fn hello() -> impl Responder {
-    HttpResponse::Ok().json("Hello from rust and mongoDB")
-}
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
